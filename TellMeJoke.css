@@ -1,0 +1,38 @@
+body{
+    padding: auto;
+    margin: auto;
+    background-color: rgb(242, 236, 229);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    
+
+}
+
+.jk {
+    text-align: center;
+}
+.jk h1{
+    padding-bottom: 12px;
+    color: rgb(102, 43, 43);
+}
+.jk button{
+    border: 1.5px solid rgb(52, 22, 22);
+    color: rgb(255, 255, 255);
+    background-color: rgb(156, 129, 129);
+    font-size: 19px;
+    padding: 6px;
+    margin-bottom:5px ;
+    border-radius: 5px;
+}
+.jk button:hover{
+    color:rgb(54, 46, 35) ;
+    background-color: rgb(243, 134, 0);
+}
+#jokes{
+    padding: 6px;
+    color: rgb(75, 55, 55);
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}

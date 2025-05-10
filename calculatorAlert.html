@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculatorAlert.css">
+</head>
+<body >
+    <h1>Calculator</h1>
+    <button onclick="addition()">addition</button>
+    <button onclick="subtraction()">subtraction</button>
+    <button onclick="multiply()">multiply</button>
+    <button onclick="divide()">divide</button>
+    <script>
+        function digits(){
+        var num1 = prompt("your 1st no.") 
+        var num2 = prompt("your 2st no.")
+        return[Number(num1),Number(num2)]
+        }
+        function addition(){
+           let[num1,num2] = digits();
+           let add  = Number(num1) + Number(num2);
+           alert("your addition is..."+add);
+          
+        } 
+        function subtraction(){
+            let[num1,num2] = digits();
+            let sub = Number(num1) - Number(num2);
+            alert("your substraction is...."+ sub);
+        }
+        function multiply(){
+            let[num1,num2] = digits();
+            let mul = Number(num1) * Number(num2);
+            alert("your multiplication is...."+mul); 
+        }
+        function divide(){
+            let[num1,num2] = digits();
+            if(num2 === 0){
+                alert("not allowed")
+            }
+            else{
+            let divi = Number(num1) / Number(num2);
+            alert("your divide is ....."+divi);
+            }
+        }
+
+    </script>
+</body>
+</html>

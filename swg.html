@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+</head>
+<body>
+   
+    <script>
+        let game = ["snake" , "water" , "gun"];
+        let random = game[Math.floor(Math.random() * game.length)]; 
+        //console.log(random);
+        let correct = 0;
+        let count = 0;
+        while(count<=6){
+            let user = prompt("enter your choice");
+            if(user == random){
+                alert("drow");
+            }
+            else if((user == "snake" && random =="gun")||
+                    (user == "water" && random =="snake")|| 
+                    (user == "gun" && random =="water")){
+                        alert("you lose");
+                    }
+            else if((user =="snake"&&random == "water")||
+                    (user =="water"&&random == "gun")||
+                    (user =="gun"&&random == "snake")){
+                        alert("you win!");
+                        correct++;
+                    }
+            else{
+                alert("invalid info");
+                continue;
+            }
+                    count++;
+           
+        }  
+        confirm("game over you win " + correct + " in out of 6");
+    </script>
+</body>
+</html>
+

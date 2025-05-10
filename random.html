@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random number</title>
+</head>
+<body>
+    <div>
+        <h1>random</h1>
+         <button onclick="random()">click to guess</button>
+
+    </div>
+    <script>
+        var min = 1;
+        var max = 100;
+        function random(){
+            attempt = 6 ;
+            let randomNo = Math.floor(Math.random()*(max - min + 1)) + min;
+            console.log(randomNo);
+           
+            while(attempt > 0){
+                let guessNo = parseInt(prompt("enter the guess no."))
+                if(randomNo == guessNo){
+                    alert("you guess the right no.");
+                }
+                else if (randomNo > guessNo){
+                    alert("your guess is to low");
+                }
+                else if (randomNo < guessNo ){
+                    alert("your guess is too high");
+                }
+               
+                attempt --;
+            }
+            alert("your attempt is out");
+            
+        }
+    </script>
+
+</body>
+</html>

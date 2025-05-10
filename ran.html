@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random no.</title>
+</head>
+<body>
+    <button onclick="random()"> click to guess</button>
+    <script>
+        function random(){
+                let no = 100;
+                let RandomNo =  Math.floor(Math.random() * no);
+                let count = 0;
+                while(count<=6){
+                    let user = prompt("enter your guess");
+                    if(user == RandomNo){
+                    return alert("congratulation....you guess right");
+            
+                    }
+                    else if(user>RandomNo){
+                        alert("your guess is high");
+            
+                    }
+                    else if(user<RandomNo){
+                        alert("you guess is low");
+            
+                    }
+                    count++;
+                }
+                alert("oops...you ran out your all chance!!..");
+            }
+    </script>
+</body>
+</html>

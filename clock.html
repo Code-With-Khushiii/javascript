@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clock.css">
+    <title>clock</title>
+</head>
+<body>
+    <div class="clock">
+       <h1>clock</h1>
+        <label id="hours">hours:</label><label id="minutes">minutes:</label><label id="second">second</label> <!--//initial have to add time today -->
+
+      </div>
+
+      
+      <script>
+        function clock(){
+       
+            setInterval(() =>{
+             let a = new Date()
+             let h = a.getHours()
+            document.getElementById('hours').innerHTML = `${h}:`
+            
+           },1 * 60 * 60 * 1000);
+            setInterval(() =>{
+             let a = new Date()
+             let m = a.getMinutes()
+            document.getElementById('minutes').innerHTML = `${m}:`
+           },1 * 60 * 1000);
+            setInterval(() =>{
+             let a = new Date()
+             let s = a.getSeconds()
+            document.getElementById('second').innerHTML = `${s}`
+           },1000);
+           let now = new Date();
+           document.getElementById('hours').innerHTML = `${now.getHours()}:`;
+           document.getElementById('minutes').innerHTML = `${now.getMinutes()}:`;
+           document.getElementById('second').innerHTML = `${now.getSeconds()}`;
+        }  
+        clock(); 
+      </script>
+</body>
+</html>
